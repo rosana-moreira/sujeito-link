@@ -1,9 +1,9 @@
 import React from "react";
+import RoutesApp from "./routes";
 function App() {
   return (
     <div className="app">
-        <h1>Test</h1>  
-       
+      <RoutesApp />
     </div>
   );
 }
