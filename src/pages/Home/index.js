@@ -3,6 +3,7 @@ import { FiLink } from "react-icons/fi";
 import Menu from "../../components/Menu";
 import LinkItem from "../../components/LinkItem";
 import api from "../../services/api";
+import { saveLink } from "../../services/storeLinks";
 import "./index.css";
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
       });
       setData(response.data);
       setShowModal(true);
+      saveLink("@encurtalink", response.data);
       setLink("");
     } catch {
       alert("Ops parece que algo deu errado!");
